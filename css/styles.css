@@ -1,0 +1,159 @@
+@import './animate.css';
+
+html {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font-family: 'Lobster Two', cursive;
+  color: #0E87CC;
+}
+
+button {
+  font-family: 'Lobster Two', cursive;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+main.container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  font-size: 32px;
+}
+
+main > .app-header {
+  width: 100%;
+  height: 75px;
+  text-align: center;
+}
+
+.app-header > .app-name {
+  font-size: 9rem;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  color: blueviolet;
+  animation-duration: 5s;
+  font-weight: bold;
+}
+
+footer.wavy-footer {
+  height: 200px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+footer.wavy-footer > .wave1, .wave2 {
+  position: absolute;
+  bottom: 0;
+  height: 200px;
+  width: 100%;
+  background: url(../res/img/wave1.png);
+  background-size: 100% 200px;
+}
+
+footer.wavy-footer > .wave2 {
+  bottom: 20px;
+  background: url(../res/img/wave2.png);
+  background-size: 100% 200px;
+  z-index: 20;
+}
+
+footer.wavy-footer > .wave1 {
+  animation: waveFlow2 10s linear infinite alternate;
+}
+
+footer.wavy-footer > .wave2 {
+  animation: waveFlow1 30s linear infinite;
+}
+
+.carousel {
+  width: 100%;
+  height: calc(100% - 300px);
+  box-sizing: border-box;
+  padding: 10px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.carousel > .panel {
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+
+.carousel > .panel > .panel-image {
+  width: 256px;
+  height: 256px;
+}
+
+.large-button {
+  box-shadow:inset 0px 1px 0px 0px #f5978e;
+	background:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
+	background-color:#f24537;
+	border-radius:6px;
+	border:1px solid #d02718;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+  font-size: 2rem;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+  text-shadow:0px 1px 0px #810e05;
+  z-index: 20;
+}
+
+.large-button:hover {
+	background:linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
+	background-color:#c62d1f;
+}
+
+.large-button:active {
+	position:relative;
+	top:2px;
+}
+
+.delayed-fade-in {
+  animation: fadeIn .7s ease-out 2s;
+}
+
+.collapsed {
+  animation: collapse .7s ease-in;
+}
+
+@keyframes collapse {
+  from {
+    height: 100%;
+  }
+
+  to {
+    height: 0;
+  }
+}
+
+.invisible {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+}

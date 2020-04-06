@@ -1,0 +1,11 @@
+{
+  "name": "meditate",
+  "version": "1.0.0",
+  "description": "a meditation web-app",
+  "main": "index.js",
+  "author": "Nishant Gupta",
+  "license": "MIT",
+  "dependencies": {
+    "howler": "^2.1.3"
+  }
+}
