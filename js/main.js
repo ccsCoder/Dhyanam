@@ -36,17 +36,18 @@ const getPrevPanel = currentPanel => {
 const activatePanel = panelIndex => {
   const prevPanel = getPrevPanel(panelIndex);
   const activePanel = getPanelAt(panelIndex);
+  activePanel.addEventListener('animationend', onAnimationEnd);
 
-  // Remove the previous panel
   if (prevPanel !== null) {
     prevPanel.removeEventListener('animationend', onAnimationEnd);
     prevPanel.addEventListener('animationend', e => e.target.style.display = 'none');
     prevPanel.classList.remove('delayed-fade-in');
-    prevPanel.classList.add(...['animated', 'fadeOutLeft']);
-    // prevPanel.style.display = 'none';
+    prevPanel.classList.add(...['animated', 'fadeOut']);
+    activePanel.classList.add('delayed-fade-in');
+  } else {
+    activePanel.classList.add('delayed-fade-in');
   }
-  activePanel.addEventListener('animationend', onAnimationEnd);
-  activePanel.classList.add(...['delayed-fade-in']);
+
   // Attach event.
   activePanel.querySelector('.panel-action-button').addEventListener('click', e => {
     activatePanel(panelIndex + 1);
@@ -54,16 +55,12 @@ const activatePanel = panelIndex => {
 }
 
 const onAnimationEnd = e => {
-  console.log('Aniamation end invoked.')
   e.target.style.opacity = 1;
 }
 
 const initCarousel = () => {
   const carouselRef = document.querySelector('.carousel');
   const panels = carouselRef.querySelectorAll('.panel');
-  // panels.forEach(panel => {
-  //   panel.addEventListener('animationend', onAnimationEnd);
-  // });
   activatePanel(1);
 }
 

@@ -133,21 +133,7 @@ footer.wavy-footer > .wave2 {
 }
 
 .delayed-fade-in {
-  animation: fadeIn .7s ease-out 2s;
-}
-
-.collapsed {
-  animation: collapse .7s ease-in;
-}
-
-@keyframes collapse {
-  from {
-    height: 100%;
-  }
-
-  to {
-    height: 0;
-  }
+  animation: fadeIn .7s ease-out 1s;
 }
 
 .invisible {
