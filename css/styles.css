@@ -105,6 +105,91 @@ footer.wavy-footer > .wave2 {
   height: 256px;
 }
 
+.panel > .panel-icon-list {
+  /* height: 50%; */
+  width: 80%;
+  padding: 40px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.ambient-sound-icon {
+  position: relative;
+  height: 175px;
+  width: 175px;
+  margin: 30px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-position: center;
+  cursor: pointer;
+  background-origin: border-box;
+  transition: filter 0.5s ease-in;
+}
+
+.ambient-sound-icon > .title {
+  position: absolute;
+  color: white;
+  width: 175px;
+  height: 175px;
+  box-sizing: border-box;
+  background: black;
+  bottom: 0;
+  text-align: center;
+  padding-top: 40%;
+  border-radius: 50%;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s ease-out ;
+}
+
+.ambient-sound-icon:hover {
+  filter: contrast(1);
+}
+
+.ambient-sound-icon:hover > .title {
+  visibility: visible;
+  opacity: 0.6;
+}
+
+@keyframes revealTitle {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: .4;
+  }
+}
+
+/* Icons */
+
+.bamboo-forest {
+  background-image: url(../res/img/ico/forest.png);
+}
+
+.om-chants {
+  background-image: url(../res/img/ico/om.png);
+}
+
+.campfire {
+  background-image: url(../res/img/ico/fire.png);
+}
+
+.rain {
+  background-image: url(../res/img/ico/rain.png);
+}
+
+.sea {
+  background-image: url(../res/img/ico/sea.png);
+}
+
+.wind {
+  background-image: url(../res/img/ico/wind.png);
+}
+
 .large-button {
   box-shadow:inset 0px 1px 0px 0px #f5978e;
 	background:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
@@ -133,27 +218,6 @@ footer.wavy-footer > .wave2 {
 }
 
 .delayed-fade-in {
-  animation: fadeIn .7s ease-out 2s;
+  animation: fadeIn .7s ease-out 1s;
 }
 
-.collapsed {
-  animation: collapse .7s ease-in;
-}
-
-@keyframes collapse {
-  from {
-    height: 100%;
-  }
-
-  to {
-    height: 0;
-  }
-}
-
-.invisible {
-  opacity: 0;
-}
-
-.visible {
-  opacity: 1;
-}
