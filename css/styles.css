@@ -105,6 +105,54 @@ footer.wavy-footer > .wave2 {
   height: 256px;
 }
 
+.panel > .panel-icon-list {
+  height: 100%;
+  width: 80%;
+  padding: 40px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.ambient-sound-icon {
+  height: 175px;
+  width: 175px;
+  margin: 30px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-position: center;
+  cursor: pointer;
+  background-origin: border-box;
+}
+
+/* Icons */
+
+.bamboo-forest {
+  background-image: url(../res/img/ico/forest.png);
+}
+
+.om-chants {
+  background-image: url(../res/img/ico/om.png);
+}
+
+.campfire {
+  background-image: url(../res/img/ico/fire.png);
+}
+
+.rain {
+  background-image: url(../res/img/ico/rain.png);
+}
+
+.sea {
+  background-image: url(../res/img/ico/sea.png);
+}
+
+.wind {
+  background-image: url(../res/img/ico/wind.png);
+}
+
 .large-button {
   box-shadow:inset 0px 1px 0px 0px #f5978e;
 	background:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
@@ -136,10 +184,3 @@ footer.wavy-footer > .wave2 {
   animation: fadeIn .7s ease-out 1s;
 }
 
-.invisible {
-  opacity: 0;
-}
-
-.visible {
-  opacity: 1;
-}
