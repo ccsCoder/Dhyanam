@@ -224,7 +224,11 @@ footer.wavy-footer>.wave2 {
 
 /* Extra small devices (phones, 600px and down) */
 
-@media only screen and (max-width: 600px) {
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (max-width: 600px),
+screen and (min-width: 600px) {
     h3 {
         font-size: 2.5rem;
         margin-top: 10px;
@@ -265,24 +269,45 @@ footer.wavy-footer>.wave2 {
 }
 
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-
-@import url('./600.css') (min-width: 600px);
-
 /* Medium devices (landscape tablets, 768px and up) */
-
-@media only screen and (min-width: 768px) {
-    html {
-        font-size: 12px;
-    }
-}
 
 
 /* Large devices (laptops/desktops, 992px and up) */
 
-@media only screen and (min-width: 992px) {
-    body {
-        background: yellow;
+@media only screen and (min-width: 768px),
+screen and (min-width: 992px) {
+    h3 {
+        font-size: 2.5rem;
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+    main.app-header {
+        height: auto;
+    }
+    .app-header>.app-name {
+        font-size: 6rem;
+    }
+    footer.wavy-footer {
+        height: 150px;
+    }
+    footer.wavy-footer>.wave1,
+    .wave2 {
+        height: 150px;
+    }
+    .carousel {
+        height: 100%;
+    }
+    .ambient-sound-icon {
+        height: 120px;
+        width: 120px;
+    }
+    .ambient-sound-icon>.title {
+        width: 120px;
+        height: 120px;
+        font-size: 2rem;
+    }
+    .large-button {
+        margin-top: 20px;
     }
 }
 
@@ -290,13 +315,96 @@ footer.wavy-footer>.wave2 {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 
 @media only screen and (min-width: 1200px) {
-    body {
-        background: green;
+    h3 {
+        font-size: 3rem;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    main>.app-header {
+        width: 100%;
+        height: 75px;
+        text-align: center;
+    }
+    .app-header>.app-name {
+        font-size: 8rem;
+        width: 500px;
+    }
+    footer.wavy-footer {
+        height: 200px;
+    }
+    footer.wavy-footer>.wave1,
+    .wave2 {
+        height: 200px;
+    }
+    .carousel {
+        height: 100%;
+    }
+    .panel>.panel-icon-list {
+        padding: 10px;
+        padding-top: 30px;
+        width: 100%;
+    }
+    .ambient-sound-icon {
+        height: 130px;
+        width: 130px;
+    }
+    .ambient-sound-icon>.title {
+        width: 130px;
+        height: 130px;
+        font-size: 2rem;
+    }
+    .large-button {
+        margin-top: 30px;
     }
 }
 
-@media only screen and (min-width: 1440px) {
-    body {
-        background: blue;
+
+/*FHD screens*/
+
+@media only screen and (min-width: 1920px) {
+    h3 {
+        font-size: 3rem;
+        margin-top: 35px;
+        margin-bottom: 35px;
+    }
+    main>.app-header {
+        width: 100%;
+        height: 75px;
+        text-align: center;
+    }
+    .app-header>.app-name {
+        font-size: 9rem;
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        color: blueviolet;
+        animation-duration: 5s;
+        font-weight: bold;
+    }
+    footer.wavy-footer {
+        height: 200px;
+    }
+    footer.wavy-footer>.wave1,
+    .wave2 {
+        height: 200px;
+    }
+    .carousel {
+        height: 100%;
+    }
+    .panel>.panel-icon-list {
+        padding: 40px;
+        width: 80%;
+    }
+    .ambient-sound-icon {
+        height: 175px;
+        width: 175px;
+    }
+    .ambient-sound-icon>.title {
+        width: 175px;
+        height: 175px;
+        font-size: 2.5rem;
+    }
+    .large-button {
+        margin-top: 20px;
     }
 }
