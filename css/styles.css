@@ -1,223 +1,302 @@
 @import './animate.css';
-
 html {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  font-size: 12px;
-  font-family: 'Lobster Two', cursive;
-  color: #0E87CC;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-family: 'Lobster Two', cursive;
+    color: #0E87CC;
 }
 
 button {
-  font-family: 'Lobster Two', cursive;
+    font-family: 'Lobster Two', cursive;
 }
 
 body {
-  height: 100%;
-  width: 100%;
-  background-color: white;
-  margin: 0;
-  padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    margin: 0;
+    padding: 0;
 }
 
 main.container {
-  height: 100%;
-  width: 100%;
-  position: relative;
-  font-size: 32px;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    font-size: 32px;
 }
 
-main > .app-header {
-  width: 100%;
-  height: 75px;
-  text-align: center;
+main>.app-header {
+    width: 100%;
+    height: 75px;
+    text-align: center;
 }
 
-.app-header > .app-name {
-  font-size: 9rem;
-  width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  color: blueviolet;
-  animation-duration: 5s;
-  font-weight: bold;
+.app-header>.app-name {
+    font-size: 9rem;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    color: blueviolet;
+    animation-duration: 5s;
+    font-weight: bold;
 }
 
 footer.wavy-footer {
-  height: 200px;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
 }
 
-footer.wavy-footer > .wave1, .wave2 {
-  position: absolute;
-  bottom: 0;
-  height: 200px;
-  width: 100%;
-  background: url(../res/img/wave1.png);
-  background-size: 100% 200px;
+footer.wavy-footer>.wave1,
+.wave2 {
+    position: absolute;
+    bottom: 0;
+    height: 200px;
+    width: 100%;
+    background: url(../res/img/wave1.png);
+    background-size: 100% 200px;
 }
 
-footer.wavy-footer > .wave2 {
-  bottom: 20px;
-  background: url(../res/img/wave2.png);
-  background-size: 100% 200px;
-  z-index: 20;
+footer.wavy-footer>.wave2 {
+    bottom: 20px;
+    background: url(../res/img/wave2.png);
+    background-size: 100% 200px;
+    z-index: 5;
 }
 
-footer.wavy-footer > .wave1 {
-  animation: waveFlow2 10s linear infinite alternate;
+footer.wavy-footer>.wave1 {
+    animation: waveFlow2 10s linear infinite alternate;
 }
 
-footer.wavy-footer > .wave2 {
-  animation: waveFlow1 30s linear infinite;
+footer.wavy-footer>.wave2 {
+    animation: waveFlow1 30s linear infinite;
 }
 
 .carousel {
-  width: 100%;
-  height: calc(100% - 300px);
-  box-sizing: border-box;
-  padding: 10px;
-  margin-top: 20px;
-  position: relative;
+    width: 100%;
+    height: calc(100% - 300px);
+    box-sizing: border-box;
+    padding: 10px;
+    margin-top: 20px;
+    position: relative;
 }
 
-.carousel > .panel {
-  width: 100%;
-  height: 100%;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  flex-direction: column;
-  justify-items: center;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
+.carousel>.panel {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-direction: column;
+    justify-items: flex-start;
+    justify-content: flex-start;
+    align-items: center;
+    opacity: 0;
 }
 
-.carousel > .panel > .panel-image {
-  width: 256px;
-  height: 256px;
+.carousel>.panel>.panel-image {
+    width: 256px;
+    height: 256px;
 }
 
-.panel > .panel-icon-list {
-  /* height: 50%; */
-  width: 80%;
-  padding: 40px;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+.panel>.panel-icon-list {
+    width: 80%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 1;
 }
 
 .ambient-sound-icon {
-  position: relative;
-  height: 175px;
-  width: 175px;
-  margin: 30px;
-  box-sizing: border-box;
-  border-radius: 50%;
-  background-position: center;
-  cursor: pointer;
-  background-origin: border-box;
-  transition: filter 0.5s ease-in;
+    position: relative;
+    height: 175px;
+    width: 175px;
+    margin: 30px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-position: center;
+    cursor: pointer;
+    background-origin: border-box;
+    transition: filter 0.5s ease-in;
 }
 
-.ambient-sound-icon > .title {
-  position: absolute;
-  color: white;
-  width: 175px;
-  height: 175px;
-  box-sizing: border-box;
-  background: black;
-  bottom: 0;
-  text-align: center;
-  padding-top: 40%;
-  border-radius: 50%;
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s, opacity 0.5s ease-out ;
+.ambient-sound-icon>.title {
+    position: absolute;
+    color: white;
+    width: 175px;
+    height: 175px;
+    box-sizing: border-box;
+    background: black;
+    bottom: 0;
+    text-align: center;
+    padding-top: 40%;
+    border-radius: 50%;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease-out;
 }
 
 .ambient-sound-icon:hover {
-  filter: contrast(1);
+    filter: contrast(1);
 }
 
-.ambient-sound-icon:hover > .title {
-  visibility: visible;
-  opacity: 0.6;
+.ambient-sound-icon:hover>.title {
+    visibility: visible;
+    opacity: 0.6;
 }
 
 @keyframes revealTitle {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: .4;
-  }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: .4;
+    }
 }
+
 
 /* Icons */
 
 .forest {
-  background-image: url(../res/img/ico/forest.png);
+    background-image: url(../res/img/ico/forest.png);
 }
 
 .om {
-  background-image: url(../res/img/ico/om.png);
+    background-image: url(../res/img/ico/om.png);
 }
 
 .fire {
-  background-image: url(../res/img/ico/fire.png);
+    background-image: url(../res/img/ico/fire.png);
 }
 
 .rain {
-  background-image: url(../res/img/ico/rain.png);
+    background-image: url(../res/img/ico/rain.png);
 }
 
 .sea {
-  background-image: url(../res/img/ico/sea.png);
+    background-image: url(../res/img/ico/sea.png);
 }
 
 .wind {
-  background-image: url(../res/img/ico/wind.png);
+    background-image: url(../res/img/ico/wind.png);
 }
 
 .large-button {
-  box-shadow:inset 0px 1px 0px 0px #f5978e;
-	background:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
-	background-color:#f24537;
-	border-radius:6px;
-	border:1px solid #d02718;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-  font-size: 2rem;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-  text-shadow:0px 1px 0px #810e05;
-  z-index: 20;
+    box-shadow: inset 0px 1px 0px 0px #f5978e;
+    background: linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
+    background-color: #f24537;
+    border-radius: 6px;
+    border: 1px solid #d02718;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #810e05;
+    z-index: 20;
 }
 
 .large-button:hover {
-	background:linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
-	background-color:#c62d1f;
+    background: linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
+    background-color: #c62d1f;
 }
 
 .large-button:active {
-	position:relative;
-	top:2px;
+    position: relative;
+    top: 2px;
 }
 
 .delayed-fade-in {
-  animation: fadeIn .7s ease-out 1s;
+    animation: fadeIn .7s ease-out 1s;
 }
 
+
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px) {
+    h3 {
+        font-size: 2.5rem;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    main.app-header {
+        height: auto;
+    }
+    .app-header>.app-name {
+        font-size: 5rem;
+    }
+    footer.wavy-footer {
+        height: 150px;
+    }
+    footer.wavy-footer>.wave1,
+    .wave2 {
+        height: 150px;
+    }
+    .carousel {
+        height: 100%;
+    }
+    .panel>.panel-icon-list {
+        padding: 10px;
+        width: 100%;
+    }
+    .ambient-sound-icon {
+        height: 100px;
+        width: 100px;
+    }
+    .ambient-sound-icon>.title {
+        width: 100px;
+        height: 100px;
+        font-size: 1.7rem;
+    }
+    .large-button {
+        margin-top: 20px;
+    }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@import url('./600.css') (min-width: 600px);
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+    body {
+        background: yellow;
+    }
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px) {
+    body {
+        background: green;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    body {
+        background: blue;
+    }
+}

@@ -1,80 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.3/howler.core.min.js"></script>
-  <title>Meditate</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.3/howler.core.min.js"></script>
+    <title>Meditate</title>
 </head>
+
 <body>
-  <main class="container">
-    <div class="app-header">
-      <div class="app-name animated fadeIn">
-        Dhyanam
-      </div>
-    </div>
-    <div class="carousel">
-      <!-- Headphone Panel -->
-      <section class="panel headphone-instructions" data-next="">
-        <div class="panel-image">
-          <img src="res/img/headphones.png" alt="Headphones" />
+    <main class="container">
+        <div class="app-header">
+            <div class="app-name animated fadeIn">
+                Dhyanam
+            </div>
         </div>
-        <h3>Heaphones recommended...</h3>
-        <div class="panel-actions">
-          <button class="panel-action-button large-button">
+        <div class="carousel">
+            <!-- Headphone Panel -->
+            <section class="panel headphone-instructions" data-next="">
+                <div class="panel-image">
+                    <img src="res/img/headphones.png" alt="Headphones" />
+                </div>
+                <h3>Heaphones recommended...</h3>
+                <div class="panel-actions">
+                    <button class="panel-action-button large-button">
             I'm Ready
           </button>
-        </div>
-      </section>
-      <!-- Different Ambient Sounds -->
-      <section class="panel" data-next="">
-        <div class="panel-icon-list">
-          <div class="ambient-sound-icon forest" data-sound="forest">
-            <div class="title">
-              Forest
-            </div>
-          </div>
-          <div class="ambient-sound-icon om" data-sound="om" >
-            <div class="title">
-              OM Chants
-            </div>
-          </div>
-          <div class="ambient-sound-icon fire" data-sound="fire">
-            <div class="title">
-              Fire
-            </div>
-          </div>
-          <div class="ambient-sound-icon rain" data-sound="rain">
-            <div class="title">
-              Rain
-            </div>
-          </div>
-          <div class="ambient-sound-icon sea" data-sound="sea">
-            <div class="title">
-              Waves
-            </div>
-          </div>
-          <div class="ambient-sound-icon wind" data-sound="wind">
-            <div class="title">
-              Wind
-            </div>
-          </div>
-        </div>
-        <h3>Click Image to play the corresponding sound.</h3>
-        <div class="panel-actions">
-          <button class="panel-action-button large-button">
+                </div>
+            </section>
+            <!-- Different Ambient Sounds -->
+            <section class="panel" data-next="">
+                <div class="panel-icon-list">
+                    <div class="ambient-sound-icon forest" data-sound="forest">
+                        <div class="title">
+                            Forest
+                        </div>
+                    </div>
+                    <div class="ambient-sound-icon om" data-sound="om">
+                        <div class="title">
+                            OM Chants
+                        </div>
+                    </div>
+                    <div class="ambient-sound-icon fire" data-sound="fire">
+                        <div class="title">
+                            Fire
+                        </div>
+                    </div>
+                    <div class="ambient-sound-icon rain" data-sound="rain">
+                        <div class="title">
+                            Rain
+                        </div>
+                    </div>
+                    <div class="ambient-sound-icon sea" data-sound="sea">
+                        <div class="title">
+                            Waves
+                        </div>
+                    </div>
+                    <div class="ambient-sound-icon wind" data-sound="wind">
+                        <div class="title">
+                            Wind
+                        </div>
+                    </div>
+                </div>
+                <h3>Click to play ambient sound.</h3>
+                <div class="panel-actions">
+                    <button class="panel-action-button large-button">
             Pause All
           </button>
+                </div>
+            </section>
         </div>
-      </section>
-    </div>
-    <footer class="wavy-footer">
-      <div class="wave1"></div>
-      <div class="wave2"></div>
-    </footer>
-  </main>
-  <script src="js/main.js"></script>
+        <footer class="wavy-footer">
+            <div class="wave1"></div>
+            <div class="wave2"></div>
+        </footer>
+    </main>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
