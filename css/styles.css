@@ -129,7 +129,8 @@ footer.wavy-footer>.wave2 {
     transition: filter 0.5s ease-in;
 }
 
-.ambient-sound-icon>.title {
+.ambient-sound-icon>.title,
+.controls {
     position: absolute;
     color: white;
     width: 175px;
@@ -143,6 +144,16 @@ footer.wavy-footer>.wave2 {
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 0.5s ease-out;
+}
+
+.ambient-sound-icon>.controls {
+    box-sizing: border-box;
+    padding: 10px;
+    padding-top: 20%;
+    height: 100%;
+    width: 100%;
+    visibility: visible;
+    opacity: 0.7;
 }
 
 .ambient-sound-icon:hover {
@@ -217,8 +228,29 @@ footer.wavy-footer>.wave2 {
     top: 2px;
 }
 
+button.pause-play {
+    background: transparent;
+    text-align: center;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+}
+
+.volume-range {
+    width: 70%;
+}
+
 .delayed-fade-in {
     animation: fadeIn .7s ease-out 1s;
+}
+
+.hidden {
+    display: none;
+}
+
+.shown {
+    display: block;
 }
 
 
