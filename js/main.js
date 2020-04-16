@@ -92,11 +92,9 @@ const activatePanel = panelIndex => {
             const soundName = e.target.parentNode.getAttribute('data-sound');
             const operation = e.target.parentNode.getAttribute('data-playing');
             if (operation == '0') {
-                console.log('Playing...');
                 SoundLibrary[soundName].play();
                 e.target.parentNode.setAttribute('data-playing', '1');
             } else {
-                console.log('Pausing...');
                 SoundLibrary[soundName].pause();
                 e.target.parentNode.setAttribute('data-playing', '0');
             }
@@ -104,6 +102,19 @@ const activatePanel = panelIndex => {
             handleControls(e.target, soundName);
         }
     });
+
+    //Event listener for volume rocker
+    const volumeRockers = activePanel.querySelectorAll('.volume-range');
+    volumeRockers.length > 0 && volumeRockers.forEach(volumeRocker => {
+            volumeRocker.addEventListener('input', e => {
+                const newValue = e.target.value;
+                console.log(`New Volume = ${newValue}`)
+                const sound = e.target.parentNode.getAttribute('data-sound');
+                console.log(sound);
+                SoundLibrary[sound].volume(newValue);
+            });
+        })
+        // volumeRocker &&
 }
 
 const onAnimationEnd = e => {
