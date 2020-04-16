@@ -35,45 +35,66 @@
             <section class="panel" data-next="">
                 <h3></h3>
                 <div class="panel-icon-list">
-                    <div class="ambient-sound-icon forest" data-sound="forest">
-                        <!-- <div class="title">
+                    <div class="ambient-sound-icon forest" data-sound="forest" data-playing="0">
+                        <div class="title">
                             Forest
-                        </div> -->
-                        <div class="controls">
-                            <button class="pause-play icon-pause"></button>
+                        </div>
+                        <div class="controls" data-sound="forest" data-playing="0">
+                            <button class="pause-play icon-play" data-playing="0"></button>
                             <input class="volume-range" type="range" min="0" max="1" step="0.1" value="0.5" />
                         </div>
                     </div>
-                    <div class="ambient-sound-icon om" data-sound="om">
+                    <div class="ambient-sound-icon om" data-sound="om" data-playing="0">
                         <div class="title">
                             OM Chants
                         </div>
+                        <div class="controls" data-sound="om" data-playing="0">
+                            <button class="pause-play icon-play" data-playing="0"></button>
+                            <input class="volume-range" type="range" min="0" max="1" step="0.1" value="0.5" />
+                        </div>
                     </div>
-                    <div class="ambient-sound-icon fire" data-sound="fire">
+                    <div class="ambient-sound-icon fire" data-sound="fire" data-playing="0">
                         <div class="title">
                             Fire
                         </div>
+                        <div class="controls" data-sound="fire" data-playing="0">
+                            <button class="pause-play icon-play" data-playing="0"></button>
+                            <input class="volume-range" type="range" min="0" max="1" step="0.1" value="0.5" />
+                        </div>
                     </div>
-                    <div class="ambient-sound-icon rain" data-sound="rain">
+                    <div class="ambient-sound-icon rain" data-sound="rain" data-playing="0">
                         <div class="title">
                             Rain
                         </div>
+                        <div class="controls" data-sound="rain" data-playing="0">
+                            <button class="pause-play icon-play" data-playing="0"></button>
+                            <input class="volume-range" type="range" min="0" max="1" step="0.1" value="0.5" />
+                        </div>
                     </div>
-                    <div class="ambient-sound-icon sea" data-sound="sea">
+                    <div class="ambient-sound-icon sea" data-sound="sea" data-playing="0">
                         <div class="title">
                             Waves
                         </div>
+                        <div class="controls" data-sound="sea" data-playing="0">
+                            <button class="pause-play icon-play" data-playing="0"></button>
+                            <input class="volume-range" type="range" min="0" max="1" step="0.1" value="0.5" />
+                        </div>
                     </div>
-                    <div class="ambient-sound-icon wind" data-sound="wind">
+                    <div class="ambient-sound-icon wind" data-sound="wind" data-playing="0">
                         <div class="title">
                             Wind
+                        </div>
+                        <div class="controls" data-sound="wind" data-playing="0">
+                            <button class="pause-play icon-play" data-playing="0"></button>
+                            <input class="volume-range" type="range" min="0" max="1" step="0.1" value="0.5" />
                         </div>
                     </div>
                 </div>
                 <div class="panel-actions">
-                    <button class="panel-action-button large-button">
-            Pause All
-          </button>
+                    <button class="panel-action-button large-button" style="display:none">
+                        Pause All
+                    </button>
+                    <h4>Click Icon to play ambient sound.</h4>
                 </div>
             </section>
         </div>
