@@ -3,9 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" />
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.3/howler.core.min.js"></script>
     <title>Meditate</title>
 </head>
@@ -26,49 +27,92 @@
                 <h3>Heaphones recommended...</h3>
                 <div class="panel-actions">
                     <button class="panel-action-button large-button">
-            I'm Ready
+            Start Relaxing...
           </button>
                 </div>
             </section>
             <!-- Different Ambient Sounds -->
             <section class="panel" data-next="">
+                <h3></h3>
                 <div class="panel-icon-list">
-                    <div class="ambient-sound-icon forest" data-sound="forest">
+                    <div class="ambient-sound-icon forest" data-sound="forest" data-playing="0">
                         <div class="title">
                             Forest
                         </div>
+                        <div class="controls" data-sound="forest">
+                            <button class="pause-play icon-play"></button>
+                            <input class="volume-range" type="range" min="0" max="1" step="0.1" value="0.5" />
+                        </div>
+                        <div class="play-indicator pulsate"></div>
+                        <div class="play-indicator pulsate" style="border-color:lightskyblue; animation-delay: 2s;"></div>
+                        <div class="play-indicator pulsate" style="border-color: limegreen; animation-delay: 3s;"></div>
                     </div>
-                    <div class="ambient-sound-icon om" data-sound="om">
+                    <div class="ambient-sound-icon om" data-sound="om" data-playing="0">
                         <div class="title">
                             OM Chants
                         </div>
+                        <div class="controls" data-sound="om">
+                            <button class="pause-play icon-play"></button>
+                            <input class="volume-range" type="range" min="0" max="1" step="0.1" value="0.5" />
+                        </div>
+                        <div class="play-indicator pulsate"></div>
+                        <div class="play-indicator pulsate" style="border-color:lightskyblue; animation-delay: 2s;"></div>
+                        <div class="play-indicator pulsate" style="border-color: limegreen; animation-delay: 3s;"></div>
                     </div>
-                    <div class="ambient-sound-icon fire" data-sound="fire">
+                    <div class="ambient-sound-icon fire" data-sound="fire" data-playing="0">
                         <div class="title">
                             Fire
                         </div>
+                        <div class="controls" data-sound="fire">
+                            <button class="pause-play icon-play"></button>
+                            <input class="volume-range" type="range" min="0" max="1" step="0.1" value="0.5" />
+                        </div>
+                        <div class="play-indicator pulsate"></div>
+                        <div class="play-indicator pulsate" style="border-color:lightskyblue; animation-delay: 2s;"></div>
+                        <div class="play-indicator pulsate" style="border-color: limegreen; animation-delay: 3s;"></div>
                     </div>
-                    <div class="ambient-sound-icon rain" data-sound="rain">
+                    <div class="ambient-sound-icon rain" data-sound="rain" data-playing="0">
                         <div class="title">
                             Rain
                         </div>
+                        <div class="controls" data-sound="rain">
+                            <button class="pause-play icon-play"></button>
+                            <input class="volume-range" type="range" min="0" max="1" step="0.1" value="0.5" />
+                        </div>
+                        <div class="play-indicator pulsate"></div>
+                        <div class="play-indicator pulsate" style="border-color:lightskyblue; animation-delay: 2s;"></div>
+                        <div class="play-indicator pulsate" style="border-color: limegreen; animation-delay: 3s;"></div>
                     </div>
-                    <div class="ambient-sound-icon sea" data-sound="sea">
+                    <div class="ambient-sound-icon sea" data-sound="sea" data-playing="0">
                         <div class="title">
                             Waves
                         </div>
+                        <div class="controls" data-sound="sea">
+                            <button class="pause-play icon-play"></button>
+                            <input class="volume-range" type="range" min="0" max="1" step="0.1" value="0.5" />
+                        </div>
+                        <div class="play-indicator pulsate"></div>
+                        <div class="play-indicator pulsate" style="border-color:lightskyblue; animation-delay: 2s;"></div>
+                        <div class="play-indicator pulsate" style="border-color: limegreen; animation-delay: 3s;"></div>
                     </div>
-                    <div class="ambient-sound-icon wind" data-sound="wind">
+                    <div class="ambient-sound-icon wind" data-sound="wind" data-playing="0">
                         <div class="title">
                             Wind
                         </div>
+                        <div class="controls" data-sound="wind">
+                            <button class="pause-play icon-play"></button>
+                            <input class="volume-range" type="range" min="0" max="1" step="0.1" value="0.5" />
+                        </div>
+                        <div class="play-indicator pulsate"></div>
+                        <div class="play-indicator pulsate" style="border-color:lightskyblue; animation-delay: 2s;"></div>
+                        <div class="play-indicator pulsate" style="border-color: limegreen; animation-delay: 3s;"></div>
                     </div>
                 </div>
-                <h3>Click to play ambient sound.</h3>
                 <div class="panel-actions">
-                    <button class="panel-action-button large-button">
-            Pause All
-          </button>
+                    <button class="panel-action-button large-button" style="display:none">
+                        Pause All
+                    </button>
+                    <h4>Click Icon to play ambient sound.</h4>
                 </div>
             </section>
         </div>
@@ -77,6 +121,9 @@
             <div class="wave2"></div>
         </footer>
     </main>
+    <div class="social" title="Huh! You found me. Better click through.">
+        <a target="_blank" href="http://www.github.com/ccsCoder">ccsCoder</a>
+    </div>
     <script src="js/main.js"></script>
 </body>
 
