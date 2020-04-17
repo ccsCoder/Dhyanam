@@ -50,14 +50,8 @@ const getPrevPanel = currentPanel => {
     return getPanelAt(currentPanel - 1);
 }
 
-const handleControls = (iconRef, soundHandle) => {
-    let iconElement = null;
-    // Add Play / Pause icon
-    if (iconRef.classList.contains('pause-play')) {
-        iconElement = iconRef;
-    } else {
-        iconElement = iconRef.querySelector('.pause-play');
-    }
+const handleControls = iconRef => {
+    let iconElement = iconRef.closest('.ambient-sound-icon').querySelector('.pause-play');
     iconElement.classList.toggle('icon-pause');
     iconElement.classList.toggle('icon-play');
 }
@@ -87,16 +81,26 @@ const activatePanel = panelIndex => {
         if (
             e.target.classList.contains('ambient-sound-icon') ||
             e.target.classList.contains('controls') ||
-            e.target.classList.contains('pause-play')
+            e.target.classList.contains('pause-play') ||
+            e.target.classList.contains('play-indicator')
         ) {
-            const soundName = e.target.parentNode.getAttribute('data-sound');
-            const operation = e.target.parentNode.getAttribute('data-playing');
+            const icon = e.target.closest('.ambient-sound-icon');
+            const soundName = icon.getAttribute('data-sound');
+            const operation = icon.getAttribute('data-playing');
             if (operation == '0') {
                 SoundLibrary[soundName].play();
-                e.target.parentNode.setAttribute('data-playing', '1');
+                icon.setAttribute('data-playing', '1');
+                // Set the animation.
+                icon.querySelectorAll('.play-indicator').forEach(pi => {
+                    pi.style.visibility = 'visible';
+                });
             } else {
                 SoundLibrary[soundName].pause();
-                e.target.parentNode.setAttribute('data-playing', '0');
+                icon.setAttribute('data-playing', '0');
+                // Set the animation.
+                icon.querySelectorAll('.play-indicator').forEach(pi => {
+                    pi.style.visibility = 'hidden';
+                });
             }
             // Also show the Controls
             handleControls(e.target, soundName);

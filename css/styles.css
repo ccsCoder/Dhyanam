@@ -170,12 +170,41 @@ footer.wavy-footer>.wave2 {
     padding: 10px;
     padding-top: 20%;
     height: 100%;
+    z-index: 5;
     width: 100%;
     transition: visibility 0s, opacity 0.5s ease-out;
 }
 
 .ambient-sound-icon:hover {
     filter: contrast(1);
+}
+
+.ambient-sound-icon .play-indicator {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    opacity: 0;
+    background: transparent;
+    border: 5px solid lightcoral;
+    box-sizing: border-box;
+    visibility: hidden;
+}
+
+.pulsate {
+    animation: pulsateIn 4s infinite ease-out;
+}
+
+@keyframes pulsateIn {
+    from {
+        transform: scale(1, 1);
+        opacity: .5;
+    }
+    to {
+        transform: scale(1.3, 1.3);
+        opacity: 0;
+    }
 }
 
 @keyframes revealTitle {
