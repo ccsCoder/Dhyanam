@@ -195,6 +195,37 @@ footer.wavy-footer>.wave2 {
     animation: pulsateIn 4s infinite ease-out;
 }
 
+.social {
+    position: fixed;
+    background: url(../res/img/ico/github-logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    right: 0;
+    font-size: 1.5rem;
+    top: 70%;
+    width: 32px;
+    height: 50px;
+    transform: translate3d(40%, -50%, 0);
+    transition: transform 0.5s ease-out;
+    /* writing-mode: vertical-rl; */
+}
+
+.social>a {
+    font-size: 1rem;
+    position: absolute;
+    top: 40px;
+    right: -50px;
+}
+
+.social:hover {
+    transform: scale(2, 2) translate(-25%, -40%);
+}
+
+.social:hover>a {
+    right: 3px;
+}
+
 @keyframes pulsateIn {
     from {
         transform: scale(1, 1);
